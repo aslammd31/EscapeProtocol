@@ -1,0 +1,36 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Entire page */
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;   /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* Game title */
+h1 {
+    font-size: 60px;
+    color: #00ff88;
+    text-shadow: 0 0 15px #00ff88;
+    margin-bottom: 30px;
+}
+
+/* Game area */
+#gameCanvas {
+    width: 800px;
+    height: 500px;
+    background-color: #222;
+    border: 4px solid #00ff88;
+}
