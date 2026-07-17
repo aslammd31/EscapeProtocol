@@ -1,23 +1,31 @@
-function drawBarrel() {
+function drawBarrel(){
 
-    ctx.fillStyle = "#ff4444";
-    ctx.fillRect(barrel.x, barrel.y, barrel.width, barrel.height);
+    barrels.forEach(function(barrel){
 
-    ctx.fillStyle = "white";
-    ctx.font = "20px Arial";
-    ctx.fillText("☣", barrel.x + 10, barrel.y + 33);
+        ctx.fillStyle="#ff4444";
+        ctx.fillRect(barrel.x,barrel.y,barrel.width,barrel.height);
+
+        ctx.fillStyle="white";
+        ctx.font="20px Arial";
+        ctx.fillText("☣",barrel.x+10,barrel.y+33);
+
+    });
 
 }
 
-function updateBarrel() {
+function updateBarrel(){
 
-    barrel.y += barrel.speed;
+    barrels.forEach(function(barrel){
 
-    if (barrel.y > canvas.height) {
+        barrel.y += barrel.speed;
 
-        barrel.y = -50;
-        barrel.x = Math.random() * (canvas.width - barrel.width);
+        if(barrel.y>canvas.height){
 
-    }
+            barrel.y=-50;
+            barrel.x=Math.random()*(canvas.width-barrel.width);
+
+        }
+
+    });
 
 }

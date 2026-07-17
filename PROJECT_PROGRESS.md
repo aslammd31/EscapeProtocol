@@ -53,3 +53,30 @@
 
 ### Next Mission
 - Add a score system.
+# Day 2
+
+## Completed
+- Added a restart system.
+- Restarted the game using the **R** key.
+- Reset player position.
+- Reset barrel positions.
+- Reset lives.
+- Added a score system.
+- Displayed the score on the screen.
+- Score increases while the player survives.
+- Score resets after restarting.
+- Added three falling toxic barrels.
+- Each barrel falls at a different speed.
+- Collision detection works with all barrels.
+- Restart resets all barrels.
+
+## Learned
+- How to restart a game without refreshing the browser.
+- How to reset game variables.
+- How to update values every frame.
+- How to display dynamic text on the canvas.
+- How arrays can store multiple game objects.
+- How `forEach()` loops through multiple objects.
+
+## Next Mission
+- Increase game difficulty over time.

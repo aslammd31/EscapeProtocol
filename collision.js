@@ -1,21 +1,29 @@
 function checkCollision(){
 
-    if(
-        player.x < barrel.x + barrel.width &&
-        player.x + player.width > barrel.x &&
-        player.y < barrel.y + barrel.height &&
-        player.y + player.height > barrel.y
-    ){
+    barrels.forEach(function(barrel){
 
-        lives--;
+        if(
 
-        barrel.y = -50;
-        barrel.x = Math.random() * (canvas.width - barrel.width);
+            player.x < barrel.x + barrel.width &&
+            player.x + player.width > barrel.x &&
+            player.y < barrel.y + barrel.height &&
+            player.y + player.height > barrel.y
 
-        if(lives <= 0){
-            gameOver = true;
+        ){
+
+            lives--;
+
+            barrel.y=-50;
+            barrel.x=Math.random()*(canvas.width-barrel.width);
+
+            if(lives<=0){
+
+                gameOver=true;
+
+            }
+
         }
 
-    }
+    });
 
 }

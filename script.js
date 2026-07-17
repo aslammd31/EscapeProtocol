@@ -14,14 +14,30 @@ let player = {
     speed: 5
 };
 
-// Barrel
-let barrel = {
-    x: Math.random() * 740,
-    y: -50,
-    width: 50,
-    height: 50,
-    speed: 3
-};
+// Barrels
+let barrels = [
+    {
+        x: Math.random() * 740,
+        y: -50,
+        width: 50,
+        height: 50,
+        speed: 3
+    },
+    {
+        x: Math.random() * 740,
+        y: -250,
+        width: 50,
+        height: 50,
+        speed: 4
+    },
+    {
+        x: Math.random() * 740,
+        y: -450,
+        width: 50,
+        height: 50,
+        speed: 5
+    }
+];
 
 // Game Data
 let lives = 5;
@@ -29,7 +45,7 @@ let score = 0;
 let gameOver = false;
 
 // Restart Function
-function restartGame() {
+function restartGame(){
 
     lives = 5;
     score = 0;
@@ -38,14 +54,21 @@ function restartGame() {
     player.x = 370;
     player.y = 220;
 
-    barrel.x = Math.random() * (canvas.width - barrel.width);
-    barrel.y = -50;
+    barrels[0].x = Math.random()*740;
+    barrels[0].y = -50;
+
+    barrels[1].x = Math.random()*740;
+    barrels[1].y = -250;
+
+    barrels[2].x = Math.random()*740;
+    barrels[2].y = -450;
+
 }
 
 // Keyboard
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown",function(event){
 
-    if(event.key === "r" || event.key === "R"){
+    if(event.key==="r" || event.key==="R"){
         if(gameOver){
             restartGame();
         }
@@ -67,5 +90,5 @@ document.addEventListener("keydown", function(event){
 
 });
 
-// Start Game
+// Start
 gameLoop();
