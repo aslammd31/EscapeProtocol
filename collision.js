@@ -13,12 +13,12 @@ function checkCollision(){
 
             lives--;
 
-            barrel.y=-50;
-            barrel.x=Math.random()*(canvas.width-barrel.width);
+            barrel.y = -50;
+            barrel.x = Math.random()*(canvas.width-barrel.width);
 
-            if(lives<=0){
+            if(lives <= 0){
 
-                gameOver=true;
+                gameOver = true;
 
             }
 

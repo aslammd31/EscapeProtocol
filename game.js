@@ -5,6 +5,13 @@ function update(){
 
     score += 0.05;
 
+    // Dynamic Difficulty
+    let level = Math.floor(score / 50);
+
+    barrels[0].speed = 3 + level;
+    barrels[1].speed = 4 + level;
+    barrels[2].speed = 5 + level;
+
     updateBarrel();
 
     checkCollision();

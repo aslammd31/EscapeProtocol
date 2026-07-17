@@ -80,3 +80,16 @@
 
 ## Next Mission
 - Increase game difficulty over time.
+## Completed
+- Added dynamic game difficulty.
+- Increased barrel speed as the score increased.
+- Added a level indicator.
+- Restart resets the difficulty level.
+
+## Learned
+- How to scale game difficulty over time.
+- How to calculate levels using the score.
+- How to update object properties dynamically.
+
+## Next Mission
+- Add a High Score system.

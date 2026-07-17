@@ -56,12 +56,15 @@ function restartGame(){
 
     barrels[0].x = Math.random()*740;
     barrels[0].y = -50;
+    barrels[0].speed = 3;
 
     barrels[1].x = Math.random()*740;
     barrels[1].y = -250;
+    barrels[1].speed = 4;
 
     barrels[2].x = Math.random()*740;
     barrels[2].y = -450;
+    barrels[2].speed = 5;
 
 }
 
@@ -90,5 +93,5 @@ document.addEventListener("keydown",function(event){
 
 });
 
-// Start
+// Start Game
 gameLoop();
