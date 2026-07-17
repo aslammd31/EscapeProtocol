@@ -5,7 +5,10 @@ function update(){
 
     score += 0.05;
 
-    // Dynamic Difficulty
+    if(score > highScore){
+        highScore = score;
+    }
+
     let level = Math.floor(score / 50);
 
     barrels[0].speed = 3 + level;

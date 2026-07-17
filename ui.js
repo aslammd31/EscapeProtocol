@@ -7,9 +7,11 @@ function drawUI(){
     ctx.fillStyle = "yellow";
     ctx.fillText("Score: " + Math.floor(score),620,35);
 
-    // Difficulty Level
     ctx.fillStyle = "#00ff88";
     ctx.fillText("Level: " + (Math.floor(score/50)+1),320,35);
+
+    ctx.fillStyle = "#00bfff";
+    ctx.fillText("High Score: " + Math.floor(highScore),520,70);
 
     if(gameOver){
 

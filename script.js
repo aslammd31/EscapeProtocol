@@ -42,6 +42,7 @@ let barrels = [
 // Game Data
 let lives = 5;
 let score = 0;
+let highScore = 0;
 let gameOver = false;
 
 // Restart Function

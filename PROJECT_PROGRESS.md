@@ -93,3 +93,16 @@
 
 ## Next Mission
 - Add a High Score system.
+## Completed
+- Added a High Score system.
+- High Score updates automatically.
+- High Score remains after restarting.
+- Current Score resets after restarting.
+
+## Learned
+- How to compare values.
+- How to keep track of the best score.
+- How to separate current game data from persistent game data.
+
+## Next Mission
+- Add sound effects.
