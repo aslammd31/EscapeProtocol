@@ -3,6 +3,8 @@ function update(){
     if(gameOver)
         return;
 
+    score += 0.05;
+
     updateBarrel();
 
     checkCollision();

@@ -25,12 +25,14 @@ let barrel = {
 
 // Game Data
 let lives = 5;
+let score = 0;
 let gameOver = false;
 
 // Restart Function
 function restartGame() {
 
     lives = 5;
+    score = 0;
     gameOver = false;
 
     player.x = 370;
@@ -43,7 +45,6 @@ function restartGame() {
 // Keyboard
 document.addEventListener("keydown", function(event){
 
-    // Restart
     if(event.key === "r" || event.key === "R"){
         if(gameOver){
             restartGame();
