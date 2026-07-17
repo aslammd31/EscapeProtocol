@@ -25,7 +25,11 @@
 - Added a 5-life system.
 - Displayed lives on the screen.
 - Added the Game Over screen.
-
+- Added a restart system.
+- Restarted the game using the R key.
+- Reset player position.
+- Reset barrel position.
+- Reset lives.
 ### Learned
 - HTML fundamentals.
 - CSS fundamentals.
@@ -43,9 +47,9 @@
 - Collision detection using rectangle overlap.
 - Game state management.
 - Professional project organization.
+- How to restart a game without reloading the browser.
+- How to reset game variables.
+- How game state works.
 
 ### Next Mission
-- Restart button.
-- Score system.
-- Difficulty increases over time.
-- Multiple toxic barrels.
+- Add a score system.

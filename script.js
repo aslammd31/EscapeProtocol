@@ -27,8 +27,28 @@ let barrel = {
 let lives = 5;
 let gameOver = false;
 
+// Restart Function
+function restartGame() {
+
+    lives = 5;
+    gameOver = false;
+
+    player.x = 370;
+    player.y = 220;
+
+    barrel.x = Math.random() * (canvas.width - barrel.width);
+    barrel.y = -50;
+}
+
 // Keyboard
 document.addEventListener("keydown", function(event){
+
+    // Restart
+    if(event.key === "r" || event.key === "R"){
+        if(gameOver){
+            restartGame();
+        }
+    }
 
     if(gameOver) return;
 

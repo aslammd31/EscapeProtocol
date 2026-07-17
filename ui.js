@@ -8,7 +8,11 @@ function drawUI(){
 
         ctx.fillStyle="red";
         ctx.font="50px Arial";
-        ctx.fillText("GAME OVER",240,250);
+        ctx.fillText("GAME OVER",220,220);
+
+        ctx.fillStyle="white";
+        ctx.font="24px Arial";
+        ctx.fillText("Press R to Restart",260,270);
 
     }
 
