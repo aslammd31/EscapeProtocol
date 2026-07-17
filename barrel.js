@@ -1,18 +1,25 @@
+// Load Barrel Image
+const barrelImage = new Image();
+barrelImage.src = "assets/images/barrel.png";
+
+// Draw All Barrels
 function drawBarrel(){
 
     barrels.forEach(function(barrel){
 
-        ctx.fillStyle = "#ff4444";
-        ctx.fillRect(barrel.x,barrel.y,barrel.width,barrel.height);
-
-        ctx.fillStyle = "white";
-        ctx.font = "20px Arial";
-        ctx.fillText("☣",barrel.x+10,barrel.y+33);
+        ctx.drawImage(
+            barrelImage,
+            barrel.x,
+            barrel.y,
+            barrel.width,
+            barrel.height
+        );
 
     });
 
 }
 
+// Update Barrels
 function updateBarrel(){
 
     barrels.forEach(function(barrel){
@@ -22,7 +29,7 @@ function updateBarrel(){
         if(barrel.y > canvas.height){
 
             barrel.y = -50;
-            barrel.x = Math.random()*(canvas.width-barrel.width);
+            barrel.x = Math.random() * (canvas.width - barrel.width);
 
         }
 

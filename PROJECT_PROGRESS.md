@@ -1,8 +1,8 @@
 # Escape Protocol - Project Progress
 
-## Day 1
+# Day 1
 
-### Completed
+## Completed
 - Created the EscapeProtocol project.
 - Created the professional project folder structure.
 - Created documentation files.
@@ -30,7 +30,8 @@
 - Reset player position.
 - Reset barrel position.
 - Reset lives.
-### Learned
+
+## Learned
 - HTML fundamentals.
 - CSS fundamentals.
 - JavaScript fundamentals.
@@ -51,8 +52,11 @@
 - How to reset game variables.
 - How game state works.
 
-### Next Mission
+## Next Mission
 - Add a score system.
+
+---
+
 # Day 2
 
 ## Completed
@@ -80,6 +84,9 @@
 
 ## Next Mission
 - Increase game difficulty over time.
+
+---
+
 ## Completed
 - Added dynamic game difficulty.
 - Increased barrel speed as the score increased.
@@ -93,6 +100,9 @@
 
 ## Next Mission
 - Add a High Score system.
+
+---
+
 ## Completed
 - Added a High Score system.
 - High Score updates automatically.
@@ -106,6 +116,9 @@
 
 ## Next Mission
 - Add sound effects.
+
+---
+
 ## Completed
 - Added hit sound effects.
 - Added Game Over sound effects.
@@ -118,6 +131,9 @@
 
 ## Next Mission
 - Replace the robot rectangle with a real Unit X-01 sprite.
+
+---
+
 ## Completed
 - Replaced the rectangle player with the Unit X-01 robot.
 - Loaded the robot image into the canvas.
@@ -131,3 +147,20 @@
 
 ## Next Mission
 - Replace the toxic barrels with real barrel sprites.
+
+---
+
+## Completed
+- Replaced the red square hazards with toxic barrel sprites.
+- Loaded the barrel image using JavaScript.
+- Rendered barrel sprites on the game canvas.
+- Verified that collision detection, scoring, sounds, movement, and game logic still work correctly with the new barrel sprites.
+
+## Learned
+- How to load multiple image assets into a game.
+- How to render image sprites on the HTML Canvas.
+- How to reuse a single sprite for multiple game objects.
+- How visual improvements can be made without changing gameplay mechanics.
+
+## Next Mission
+- Add a sci-fi background.
