@@ -118,3 +118,16 @@
 
 ## Next Mission
 - Replace the robot rectangle with a real Unit X-01 sprite.
+## Completed
+- Replaced the rectangle player with the Unit X-01 robot.
+- Loaded the robot image into the canvas.
+- Successfully rendered the player sprite.
+- Verified movement, collision detection, score system, and sounds still work.
+
+## Learned
+- How to load images using JavaScript.
+- How to draw images using `drawImage()`.
+- How to replace shapes with sprites.
+
+## Next Mission
+- Replace the toxic barrels with real barrel sprites.
