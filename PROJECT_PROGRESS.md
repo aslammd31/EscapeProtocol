@@ -106,3 +106,15 @@
 
 ## Next Mission
 - Add sound effects.
+## Completed
+- Added hit sound effects.
+- Added Game Over sound effects.
+- Connected sounds to gameplay events.
+
+## Learned
+- How to load audio files.
+- How to play sounds using JavaScript.
+- How to trigger sounds during game events.
+
+## Next Mission
+- Replace the robot rectangle with a real Unit X-01 sprite.
