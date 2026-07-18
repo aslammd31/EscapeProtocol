@@ -191,3 +191,17 @@
 
 ## Next Mission
 - Add heart icons for the lives system.
+## Completed
+- Added a professional Main Menu.
+- Game now starts only after pressing Enter.
+- Added a blinking "Press ENTER to Start" prompt.
+- Displayed High Score on the Main Menu.
+- Prevented gameplay while on the menu.
+
+## Learned
+- How to create game states.
+- How to separate menu logic from gameplay.
+- How to pause game updates until the player starts.
+
+## Next Mission
+- Add pixel-art heart icons.

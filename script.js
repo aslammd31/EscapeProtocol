@@ -9,20 +9,29 @@ canvas.height = 500;
 const hitSound = new Audio("assets/sounds/hit.mp3");
 const gameOverSound = new Audio("assets/sounds/gameover.mp3");
 
+// ===== MENU =====
+let gameStarted = false;
+let blink = true;
+
+// Blink Animation
+setInterval(function () {
+    blink = !blink;
+}, 500);
+
 // Player
 let player = {
     x: 370,
     y: 220,
     width: 60,
     height: 80,
-    speed: 5
+    speed: 8
 };
 
 // Barrels
 let barrels = [
-    { x: Math.random() * 740, y: -50, width: 50, height: 50, speed: 3 },
-    { x: Math.random() * 740, y: -250, width: 50, height: 50, speed: 4 },
-    { x: Math.random() * 740, y: -450, width: 50, height: 50, speed: 5 }
+    { x: Math.random() * 740, y: -100, width: 50, height: 50, speed: 2 },
+    { x: Math.random() * 740, y: -300, width: 50, height: 50, speed: 2.5 },
+    { x: Math.random() * 740, y: -500, width: 50, height: 50, speed: 3 }
 ];
 
 // Game Data
@@ -41,34 +50,69 @@ function restartGame() {
     player.x = 370;
     player.y = 220;
 
-    barrels[0] = { x: Math.random() * 740, y: -50, width: 50, height: 50, speed: 3 };
-    barrels[1] = { x: Math.random() * 740, y: -250, width: 50, height: 50, speed: 4 };
-    barrels[2] = { x: Math.random() * 740, y: -450, width: 50, height: 50, speed: 5 };
+    barrels[0] = {
+        x: Math.random() * 740,
+        y: -100,
+        width: 50,
+        height: 50,
+        speed: 2
+    };
+
+    barrels[1] = {
+        x: Math.random() * 740,
+        y: -300,
+        width: 50,
+        height: 50,
+        speed: 2.5
+    };
+
+    barrels[2] = {
+        x: Math.random() * 740,
+        y: -500,
+        width: 50,
+        height: 50,
+        speed: 3
+    };
+
 }
 
-// Keyboard Controls
-document.addEventListener("keydown", function(event){
+// Keyboard
+document.addEventListener("keydown", function (event) {
 
-    if(event.key === "r" || event.key === "R"){
-        if(gameOver){
-            restartGame();
-        }
+    // Start Game
+    if (!gameStarted && event.key === "Enter") {
+        gameStarted = true;
+        return;
     }
 
-    if(gameOver) return;
+    // Restart
+    if (event.key === "r" || event.key === "R") {
 
-    if(event.key === "ArrowLeft" && player.x > 8)
+        if (gameOver) {
+            restartGame();
+        }
+
+    }
+
+    if (!gameStarted)
+        return;
+
+    if (gameOver)
+        return;
+
+    if (event.key === "ArrowLeft" && player.x > 8)
         player.x -= player.speed;
 
-    if(event.key === "ArrowRight" && player.x + 68 < canvas.width)
+    if (event.key === "ArrowRight" && player.x + player.width < canvas.width)
         player.x += player.speed;
 
-    if(event.key === "ArrowUp" && player.y > 0)
+    if (event.key === "ArrowUp" && player.y > 0)
         player.y -= player.speed;
 
-    if(event.key === "ArrowDown" && player.y + 85 < canvas.height)
+    if (event.key === "ArrowDown" && player.y + player.height < canvas.height)
         player.y += player.speed;
+
 });
 
-// Start Game
+// Start Game Loop
 gameLoop();
