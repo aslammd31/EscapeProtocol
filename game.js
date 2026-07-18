@@ -1,19 +1,12 @@
-function update(){
+// Load Background Image
+const background = new Image();
+background.src = "assets/images/background.png";
 
-    if(gameOver)
+// Update Game
+function update() {
+
+    if (gameOver)
         return;
-
-    score += 0.05;
-
-    if(score > highScore){
-        highScore = score;
-    }
-
-    let level = Math.floor(score / 50);
-
-    barrels[0].speed = 3 + level;
-    barrels[1].speed = 4 + level;
-    barrels[2].speed = 5 + level;
 
     updateBarrel();
 
@@ -21,10 +14,21 @@ function update(){
 
 }
 
-function draw(){
+// Draw Everything
+function draw() {
 
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Draw Background
+    ctx.drawImage(
+        background,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    // Draw Game Objects
     drawPlayer();
 
     drawBarrel();
@@ -33,7 +37,8 @@ function draw(){
 
 }
 
-function gameLoop(){
+// Main Game Loop
+function gameLoop() {
 
     update();
 

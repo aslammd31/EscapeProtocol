@@ -164,3 +164,30 @@
 
 ## Next Mission
 - Add a sci-fi background.
+## Completed
+- Added a sci-fi laboratory background.
+- Loaded the background image into the game.
+- Drew the background before all game objects.
+- Improved the overall visual appearance of the game.
+
+## Learned
+- How to load background images.
+- How draw order affects rendering.
+- How layering works in HTML Canvas.
+
+## Next Mission
+- Improve the game UI with a futuristic HUD.
+## Completed
+- Added a futuristic HUD.
+- Created a semi-transparent UI panel.
+- Added a neon border around the HUD.
+- Improved the Game Over screen.
+- Enhanced the overall game interface.
+
+## Learned
+- How to create UI panels using Canvas.
+- How transparency works with RGBA colors.
+- How layering improves game presentation.
+
+## Next Mission
+- Add heart icons for the lives system.
